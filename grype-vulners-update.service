@@ -1,0 +1,14 @@
+[Unit]
+Description=Update Grype Vulners DataBase Daemon
+After=network.target
+
+
+[Service]
+User=your_username
+Group=your_group
+Type=simple
+ExecStart= /bin/bash /path/to/grype_vulners/grype-vulners-db-update.sh
+
+[Install]
+WantedBy=multi-user.target
+

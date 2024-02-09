@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Update Grype Vulners DataBase
+
+[Timer]
+Unit=grype-vulners-update.service
+OnCalendar=*-*-* 08:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
